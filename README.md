@@ -59,6 +59,19 @@ Once everything is installed, run:
 ```
 npm run dev
 ```
+PennyPilot is designed and operated with security woven into every layer of the SDLC.
+
+| Layer | Key Measures |
+|-------|--------------|
+| **Identity & Access** | • AWS IAM with Role-Based Access Control (RBAC) and mandatory MFA<br>• Least-privilege policies for CI/CD, build, and runtime roles |
+| **Secrets Management** | • AWS Secrets Manager for DB credentials, Plaid keys, and signing keys<br>• .env files only for non-production local testing |
+| **Network Edge** | • AWS WAF, ALB security policies, and VPC security groups<br>• Infrastructure-as-Code (Terraform) enforces port/IP whitelists |
+| **App Security** | • OWASP ZAP automated in the pipeline<br>• Regular guided pentesting with Metasploit<br>• Dependency and container image scans on every push |
+| **Data Protection** | • TLS 1.3 for all external traffic<br>• PostgreSQL & S3 encrypted at rest with AWS KMS-managed keys |
+| **Monitoring & Response** | • Centralized logging to OpenSearch (ELK) and Azure Sentinel SIEM<br>• Alerting mapped to MITRE ATT&CK techniques |
+| **Threat Modeling** | • STRIDE analysis performed each sprint; findings tracked in Jira<br>• MITRE ATT&CK used to validate detection coverage |
+
+These controls align with the OWASP Top 10 and CIS Controls v8, giving the team continuous visibility and rapid response while keeping developer velocity high.
 
 ## Authors
 
