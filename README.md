@@ -66,3 +66,4 @@ npm run dev
 - Alex Alarcon
 - Jennifer Coppick
 - Kevin Jones
+- Jared Wilson
